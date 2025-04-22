@@ -17,9 +17,11 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $nome, $data_nascimento, $sexo);
 
 if ($stmt->execute()) {
-    echo "Funcionário cadastrado com sucesso!";
+    $msg = "Cadastro realizado com sucesso!";
+    header("Location: index.html?msg=" .urldecode($msg));
+    exit();
 } else {
-    echo "Erro: " . $stmt->error;
+    echo "<script>alert('Erro: " . $stmt->error . "');</script>";
 }
 
 $conn->close();
