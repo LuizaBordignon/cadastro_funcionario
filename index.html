@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadastroFuncionarios</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="script.js" defer></script>
+    <form id="cadastro-funcionario" action="cadastro.php" method="POST">
+</head>
+<body>
+
+    <div class="caixa">
+        <h1 class="inicio">Cadastro de Funcionário</h1>
+        <form id="cadastro-funcionario">
+            <label class="name" for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+            
+            <label class= "data" for="idade">Informe sua data de nascimento:</label>
+            <input type="date" name="idade" id="idade" required><br>
+
+            <p>Sexo:</p>
+            <label>
+            <input type="radio" name="sexo" value="M" required> Masculino
+            </label>
+
+            <label>
+            <input type="radio" name="sexo" value="F" required> Feminino
+            </label><br><br>
+
+            <button class= 'cadastrar' type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
